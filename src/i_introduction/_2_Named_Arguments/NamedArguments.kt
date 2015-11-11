@@ -5,11 +5,12 @@ package i_introduction._2_Named_Arguments
 //    Change values of some of the 'joinToString' arguments.
 //    Use default and named arguments to improve the readability of the function invocation.
 
-fun todoTask2(collection: Collection<Int>): String
+fun todoTask2(collection:Collection<Int>):String
 {
     return collection.joinToString(prefix = "{",postfix = "}")
 }
 
-fun task2(collection: Collection<Int>): String {
+fun task2(collection:Collection<Int>):String
+{
     return todoTask2(collection)
 }

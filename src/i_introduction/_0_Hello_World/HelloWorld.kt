@@ -14,12 +14,13 @@ package i_introduction._0_Hello_World.Hello
 //
 //    To start please make the function 'task0' return "OK".
 
-fun todoTask0(): String
+fun todoTask0():String
 {
     return "OK"
 }
 
-fun task0(): String {
+fun task0():String
+{
     return todoTask0()
 }
 

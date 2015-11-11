@@ -14,9 +14,9 @@ fun example() = Pattern.compile(getPattern()).matcher("Douglas Adams (11.03.1952
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 
-fun todoTask4(): String
+fun todoTask4():String
 {
     return """(\w*) (\w*) \((\d{2}) $month (\d{4})\)"""
 }
 
-fun task4(): String = todoTask4()
+fun task4():String = todoTask4()

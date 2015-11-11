@@ -5,12 +5,12 @@ package i_introduction._4_Lambdas
 //    You can find the appropriate function to call on 'collection' through IntelliJ's code completion feature.
 //    (Don't use the class 'Iterables').
 
-fun todoTask3(collection: Collection<Int>): Boolean
+fun todoTask3(collection:Collection<Int>):Boolean
 {
-    return collection.any { element -> element % 42 == 0 }
+    return collection.any { element -> element%42 == 0 }
 }
 
-fun task3(collection: Collection<Int>): Boolean = todoTask3(collection)
+fun task3(collection:Collection<Int>):Boolean = todoTask3(collection)
 
 
 
