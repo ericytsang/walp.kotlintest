@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/workshop-jb.iml" filepath="$PROJECT_DIR$/workshop-jb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/walp.kotlintest.iml" filepath="$PROJECT_DIR$/walp.kotlintest.iml" />
     </modules>
   </component>
 </project>
-
