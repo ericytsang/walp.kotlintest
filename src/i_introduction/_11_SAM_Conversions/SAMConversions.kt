@@ -10,8 +10,9 @@ import java.util.*
 //
 //    Rewrite the previous example changing an object expression to a lambda.
 
-fun task11():List<Int> {
-    val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, { x, y -> y!!-x!! })
+fun task11():List<Int>
+{
+    val arrayList = arrayListOf(1,5,2)
+    Collections.sort(arrayList,{ x,y -> y!!-x!! })
     return arrayList
 }

@@ -1,16 +1,21 @@
 package ii_collections
 
-fun example4() {
-    val max = listOf(1, 42, 4).max()
-    val longestString = listOf("a", "b").maxBy { it.length }
+import ii_collections.data.customers
+
+fun example4()
+{
+    val max = listOf(1,42,4).max()
+    val longestString = listOf("a","b").maxBy { it.length }
 }
 
-fun Shop.getCustomerWithMaximumNumberOfOrders(): Customer? {
+fun Shop.getCustomerWithMaximumNumberOfOrders():Customer?
+{
     // Return a customer whose order count is the highest among all customers
-    todoCollectionTask()
+    return customers.maxBy { it.orders.count() }
 }
 
-fun Customer.getMostExpensiveOrderedProduct(): Product? {
+fun Customer.getMostExpensiveOrderedProduct():Product?
+{
     // Return the most expensive product which has been ordered
-    todoCollectionTask()
+    return orderedProducts.maxBy { it.price }
 }

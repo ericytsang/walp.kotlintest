@@ -12,6 +12,6 @@ import util.*
 
 fun task12():List<Int>
 {
-    return arrayListOf(1,5,2).sorted().reversed()
+    return arrayListOf(1,5,2).sortedDescending()
 }
 
