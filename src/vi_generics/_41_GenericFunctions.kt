@@ -1,8 +1,11 @@
 package vi_generics
 
+import ii_collections.data.reka
+import syntax.qualifiedThis.labelsForExtensionFunctionLiterals
 import java.util.ArrayList
 import java.util.HashSet
 import util.TODO
+import java.util.function.Predicate
 
 fun task41(): Nothing = TODO(
     """
@@ -21,11 +24,25 @@ fun task41(): Nothing = TODO(
 )
 
 fun List<String>.partitionWordsAndLines(): Pair<List<String>, List<String>> {
-    task41()
-//    return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }
+    return partitionTo(ArrayList<String>(), ArrayList()) { s -> !s.contains(" ") }
 }
 
 fun Set<Char>.partitionLettersAndOtherSymbols(): Pair<Set<Char>, Set<Char>> {
-    task41()
-//    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z'}
+    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z'}
+}
+
+fun <Element,TrueElements:MutableCollection<Element>,FalseElements:MutableCollection<Element>>
+    Collection<Element>.partitionTo(trueElements:TrueElements,falseElements:FalseElements,block:(Element)->Boolean): Pair<TrueElements,FalseElements>
+{
+    forEach {
+        if(block(it))
+        {
+            trueElements.add(it)
+        }
+        else
+        {
+            falseElements.add(it)
+        }
+    }
+    return Pair(trueElements,falseElements)
 }
