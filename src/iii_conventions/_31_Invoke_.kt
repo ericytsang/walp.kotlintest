@@ -3,7 +3,11 @@ package iii_conventions
 import util.*
 
 
-class Invokable
+class Invokable(private val invocationCount:Int = 0)
+{
+    operator fun invoke() = Invokable(invocationCount+1)
+    fun getNumberOfInvocations():Int = invocationCount
+}
 
 fun todoTask31(): Nothing = TODO(
     """
@@ -14,6 +18,5 @@ fun todoTask31(): Nothing = TODO(
     references = { invokable: Invokable -> })
 
 fun task31(invokable: Invokable): Int {
-    todoTask31()
-//    return invokable()()()().getNumberOfInvocations()
+    return invokable()()()().getNumberOfInvocations()
 }
